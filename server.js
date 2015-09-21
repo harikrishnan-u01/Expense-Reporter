@@ -22,6 +22,7 @@ db.on('ready', function () {
 
 
 app.use(express.static(__dirname + "/app"));
+app.use(express.static(__dirname + "/bower_components"));
 
 app.get('/expenseDetails',function(req,res){
 	db.expense_details.find(function(err,docs){
